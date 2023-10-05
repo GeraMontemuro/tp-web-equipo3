@@ -67,16 +67,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Compra.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Detalle1prueba.aspx" />
+    <Content Include="Logos\Akatsuki-Logo-PNG-Pic.png" />
+    <Content Include="Logos\free-fire-png-logo-11569068080w6jocjzwuk.png" />
+    <Content Include="Logos\png-clipart-computer-icons-e-commerce-shopping-cart-online-shopping-supermarket-shopping-retail-area.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compra.aspx.cs">
+      <DependentUpon>Compra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compra.aspx.designer.cs">
+      <DependentUpon>Compra.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detalle1prueba.aspx.cs">
+      <DependentUpon>Detalle1prueba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detalle1prueba.aspx.designer.cs">
+      <DependentUpon>Detalle1prueba.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Mspage.Master.cs">
