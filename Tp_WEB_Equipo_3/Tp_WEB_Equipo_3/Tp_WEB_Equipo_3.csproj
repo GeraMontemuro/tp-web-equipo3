@@ -69,7 +69,7 @@
   <ItemGroup>
     <Content Include="Carrito.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="Detalle1prueba.aspx" />
+    <Content Include="Detalle.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logos\Akatsuki-Logo-PNG-Pic.png" />
     <Content Include="Logos\free-fire-png-logo-11569068080w6jocjzwuk.png" />
@@ -91,12 +91,12 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Detalle1prueba.aspx.cs">
-      <DependentUpon>Detalle1prueba.aspx</DependentUpon>
+    <Compile Include="Detalle.aspx.cs">
+      <DependentUpon>Detalle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Detalle1prueba.aspx.designer.cs">
-      <DependentUpon>Detalle1prueba.aspx</DependentUpon>
+    <Compile Include="Detalle.aspx.designer.cs">
+      <DependentUpon>Detalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

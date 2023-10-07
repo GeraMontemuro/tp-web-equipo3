@@ -30,7 +30,6 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
                             <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
-                            <a class="nav-link" href="Detalle1prueba.aspx">Detalles</a>
                             <a class="nav-link" href="Compra.aspx">Ver Carrito</a>
                             <a class="nav-link" href="Login.aspx">Iniciar Sesión</a>
                       </div>                            

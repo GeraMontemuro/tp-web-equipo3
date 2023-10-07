@@ -11,7 +11,7 @@ namespace Tp_WEB_Equipo_3
 {
 
 
-    public partial class Pagina1
+    public partial class Default
     {
 
         /// <summary>
