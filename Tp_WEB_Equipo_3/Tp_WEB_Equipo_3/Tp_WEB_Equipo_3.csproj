@@ -70,6 +70,7 @@
     <Content Include="Compra.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Detalle1prueba.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Logos\Akatsuki-Logo-PNG-Pic.png" />
     <Content Include="Logos\free-fire-png-logo-11569068080w6jocjzwuk.png" />
     <Content Include="Logos\png-clipart-computer-icons-e-commerce-shopping-cart-online-shopping-supermarket-shopping-retail-area.png" />
@@ -96,6 +97,13 @@
     </Compile>
     <Compile Include="Detalle1prueba.aspx.designer.cs">
       <DependentUpon>Detalle1prueba.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Mspage.Master.cs">

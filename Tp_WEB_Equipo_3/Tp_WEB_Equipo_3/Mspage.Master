@@ -31,14 +31,17 @@
                         <div class="navbar-nav">
                             <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
                             <a class="nav-link" href="Detalle1prueba.aspx">Detalles</a>
-                            <a class="nav-link" href="Compra.aspx">Terminar Tu Compra</a>
+                            <a class="nav-link" href="Compra.aspx">Finalizar Compra</a>
                       </div>                            
                     </div>
                 </div>
             </nav>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+            <div class="container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
             <footer>
+                <hr />
                 hola guido...
             </footer>
         </div>
