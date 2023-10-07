@@ -3,4 +3,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>ESTE ES EL HOME. LISTA DE ARTICULOS</h1>
+
+    <asp:GridView ID="dgvArticulos"  runat="server" CssClass="table"></asp:GridView>
 </asp:Content>
