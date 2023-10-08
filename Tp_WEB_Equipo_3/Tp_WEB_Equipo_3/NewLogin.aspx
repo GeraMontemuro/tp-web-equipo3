@@ -13,31 +13,33 @@
      <div class="col-2">
          <div class="col">
              <div class="mb-3">
-                 <label for="txtEmail" class="form-label">Usuario</label>
-                 <asp:TextBox runat="server" CssClass="form-control" ID="txtEmail" />
+                 <label for="txtEmail1" class="form-label">Usuario</label>
+                 <asp:TextBox runat="server" CssClass="form-control" ID="txtEmail1" />
              </div>
              <div class="mb-3">
-                 <label for="txtPassword" class="form-label">Contraseña</label>
-                 <asp:TextBox runat="server" CssClass="form-control" ID="txtPassword" type="password" />
+                 <label for="txtPassword1" class="form-label">Contraseña</label>
+                 <asp:TextBox runat="server" CssClass="form-control" ID="txtPassword1" type="password" />
              </div>
              <div class="mb-3">
-                 <label for="Nombre" class="form-label">Nombre</label>
-                 <asp:TextBox runat="server" CssClass="form-control" ID="TextBox1" type="Nombre" />
+                 <label for="Nombre1" class="form-label">Nombre</label>
+                 <asp:TextBox runat="server" CssClass="form-control" ID="Nombre1" type="Nombre" />
 
              </div>
              <div class="mb-3">
-                 <label for="Apellido" class="form-label">Apellido</label>
-                 <asp:TextBox runat="server" CssClass="form-control" ID="TextBox2" type="Apellido" />
+                 <label for="Apellido1" class="form-label">Apellido</label>
+                 <asp:TextBox runat="server" CssClass="form-control" ID="Apellido1" type="Apellido" />
              </div>
              <div class="mb-3">
-                <label for="FechaNacimiento" class="form-label">Fecha</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="TextBox3" type="date" />
+                <label for="FechaNacimiento1" class="form-label">Fecha</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="FechaNacimiento1" type="date" />
              </div>
              <div class="mb-3">
-                 <label for="Numero" class="form-label">Numero</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="TextBox4" type="" />
+                 <label for="Numero1" class="form-label">Numero</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="Numero1" type="" />
              </div>
-           
+             <div>
+                  <asp:Button Text="Crear Usuario" CssClass="btn btn-primary" ID="btnCrearUsuario" onClick="btnCrearUsuario_Click" runat="server" />
+             </div>
              </div>
               </div>
              </div>
