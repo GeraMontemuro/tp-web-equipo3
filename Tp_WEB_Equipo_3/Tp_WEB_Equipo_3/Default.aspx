@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>ESTE ES EL HOME. LISTA DE ARTICULOS</h1>
-
+    <a1>ejfejfh</a1>
     <!-- <asp:GridView ID="dgvArticulos"  runat="server" CssClass="table" AutoGenerateColumns="false">
         <Columns>
             <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
