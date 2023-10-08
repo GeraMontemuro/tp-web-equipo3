@@ -18,7 +18,19 @@ namespace Tp_WEB_Equipo_3
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
         // dgvArticulos.DataSource = articuloNegocio.listarconSP();
         //dgvArticulos.DataBind(); 
-        ListaArticulo = articuloNegocio.listarconSP();
+            ListaArticulo = articuloNegocio.listarconSP();
+
+            if (!IsPostBack)
+            {
+            repRepetidor.DataSource = ListaArticulo;
+            repRepetidor.DataBind();
+            }
+
+        }
+
+        protected void btnComprar_Click(object sender, EventArgs e)
+        {
+            string valor = ((Button)sender).CommandArgument;
         }
     }
 }

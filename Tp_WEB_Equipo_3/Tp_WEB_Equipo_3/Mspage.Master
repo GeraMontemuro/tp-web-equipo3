@@ -31,9 +31,9 @@
                         <div class="navbar-nav">
                             <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
                             <a class="nav-link" href="Compra.aspx">Ver Carrito</a>
-                            <a class="nav-link" href="Login.aspx">Iniciar Sesión</a>
+                            <a class="nav-link" href="Login.aspx">Iniciar Sesión</a>                        
                       </div>                            
-                    </div>
+                    </div>     
                 </div>
             </nav>
             <div class="container">
