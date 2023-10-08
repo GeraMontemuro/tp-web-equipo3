@@ -18,12 +18,14 @@
                 
                
                 <asp:Button Text="Ingresar" CssClass="btn btn-primary" ID="btnAceptar" onClick="btnAceptar_Click" runat="server" />
-            </div>
+              <a href="Crear Usuarios">  Crear Usuarios</a>
+              <a href="olvido contraseña?"> olvido contraseña </a>
+            </div> 
         </div>
     </div>
 
     <div class="col-2">
     </div>
-    </div>
+    
 
 </asp:Content>

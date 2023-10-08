@@ -74,6 +74,7 @@
     <Content Include="Logos\Akatsuki-Logo-PNG-Pic.png" />
     <Content Include="Logos\free-fire-png-logo-11569068080w6jocjzwuk.png" />
     <Content Include="Logos\png-clipart-computer-icons-e-commerce-shopping-cart-online-shopping-supermarket-shopping-retail-area.png" />
+    <Content Include="NewLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +105,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewLogin.aspx.cs">
+      <DependentUpon>NewLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewLogin.aspx.designer.cs">
+      <DependentUpon>NewLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Mspage.Master.cs">

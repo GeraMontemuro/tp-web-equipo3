@@ -16,7 +16,20 @@ namespace Tp_WEB_Equipo_3
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-           
+            string nombre = txtEmail.Text;
+            string password = txtPassword.Text;
+
+
+            if ((txtEmail.Text != "") && (txtPassword.Text != ""))
+            {
+
+
+                if ((txtEmail.Text == nombre) && (txtPassword.Text == password))
+                {
+                    //MessageBox.Show("Bienvenido");
+
+                }
+            }
         }
     }
 }
