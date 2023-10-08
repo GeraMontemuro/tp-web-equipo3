@@ -33,7 +33,7 @@
                             <a class="nav-link" href="Compra.aspx">Ver Carrito</a>
                             <a class="nav-link" href="Login.aspx">Iniciar Sesión</a>                        
                       </div>                            
-                    </div>     
+                    
                 </div>
             </nav>
             <div class="container">

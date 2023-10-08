@@ -16,8 +16,7 @@ namespace Tp_WEB_Equipo_3
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
-        // dgvArticulos.DataSource = articuloNegocio.listarconSP();
-        //dgvArticulos.DataBind(); 
+        
             ListaArticulo = articuloNegocio.listarconSP();
 
             if (!IsPostBack)

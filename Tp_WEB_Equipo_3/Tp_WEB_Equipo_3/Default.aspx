@@ -5,15 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>ESTE ES EL HOME. LISTA DE ARTICULOS</h1>
    
-    <!-- <asp:GridView ID="dgvArticulos"  runat="server" CssClass="table" AutoGenerateColumns="false">
-        <Columns>
-            <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
-            <asp:BoundField HeaderText="Marca" DataField="Marca.Descripcion" />
-            <asp:BoundField HeaderText="Categoria" DataField="Categoria.Descripcion" />
-
-        </Columns>
-
-    </asp:GridView> -->
+    
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
 

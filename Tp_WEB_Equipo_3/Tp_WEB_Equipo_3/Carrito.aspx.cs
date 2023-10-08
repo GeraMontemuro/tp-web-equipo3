@@ -1,4 +1,5 @@
-﻿using System;
+﻿using negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace Tp_WEB_Equipo_3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+           // dgvCarrito.DataSource = articuloNegocio.listarconSP();
+           // dgvCarrito.DataBind(); 
         }
     }
 }
