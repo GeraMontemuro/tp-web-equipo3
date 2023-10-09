@@ -26,7 +26,7 @@ namespace Tp_WEB_Equipo_3
 
                 if ((txtEmail.Text == nombre) && (txtPassword.Text == password))
                 {
-                    //MessageBox.Show("Bienvenido");
+                    //mensaje de bienvenida y carga de pagina con usuario logeadpo
 
                 }
             }
