@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using dominio;
 using negocio;
-using dominio;
+using System;
+using System.Collections.Generic;
+using System.Web.UI.WebControls;
 
 namespace Tp_WEB_Equipo_3
 {
@@ -38,16 +35,18 @@ namespace Tp_WEB_Equipo_3
 
         }
 
-        protected void btnComprar_Click(object sender, EventArgs e)
+        protected void btnDetalle_Click(object sender, EventArgs e)
         {
             string valor = ((Button)sender).CommandArgument;
+            Response.Redirect("Detalle.aspx?auxid=" + valor);
+
         }
 
-        protected void dgvarticulos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          //  var algo= dgvarticulos.SelectedRow.Cells[0].Text;
-           // var auxid = dgvarticulos.SelectedDataKey.Value.ToString();
-          //  Response.Redirect("Detalle.aspx?auxid=" + auxid);
-        }
+        //protected void dgvarticulos_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //  //  var algo= dgvarticulos.SelectedRow.Cells[0].Text;
+        //   // var auxid = dgvarticulos.SelectedDataKey.Value.ToString();
+        //  //  Response.Redirect("Detalle.aspx?auxid=" + auxid);
+        //}
     }
 }

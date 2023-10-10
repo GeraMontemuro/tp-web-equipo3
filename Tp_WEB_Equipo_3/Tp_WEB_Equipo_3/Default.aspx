@@ -12,16 +12,16 @@
  <asp:Repeater ID="repRepetidor" runat="server">
             <ItemTemplate>
                 <div class="col">
-                <div class="card">
-                    <img src="<%#Eval("UrlImagen") %>" class="card-img-top" alt="...">
+                <div class="card" style="width:300px">
+                    <img src="<%#Eval("UrlImagen") %>" class="card-img-top" style="width:auto; height:300px" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><%#Eval("Nombre") %></h5>
                         <p class="card-text"><%#Eval("Descripcion") %></p>
                        <%-- <a href="Detalle.aspx?id=<%#Eval("IdArticulo") %>">Ver Detalle</a>--%>
                         <asp:HyperLink ID="lnkDetalleArticulo" runat="server" NavigateUrl='<%# "Detalle.aspx?id=" + Eval("IDArticulo") %>'
-    Text="Ver detalles" />
+                         Text="Ver detalles" />
 
-<%--                        <asp:Button Text="Comprar" CssClass="btn btn-primary" runat="server" id="btnComprar" CommandArgument='<%#Eval("IdArticulo") %>' CommandName="ArtComprado" OnClick="btnComprar_Click" />--%>
+                       <asp:Button Text="Detalle" CssClass="btn btn-primary" runat="server" id="btnDetalle" CommandArgument='<%#Eval("IdArticulo") %>' CommandName="ArtDetalle" OnClick="btnDetalle_Click" />
                     </div>
                 </div>
             </div>
