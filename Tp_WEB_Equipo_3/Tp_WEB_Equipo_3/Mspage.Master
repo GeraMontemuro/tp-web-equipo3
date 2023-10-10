@@ -21,7 +21,7 @@
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a href="">
+                    <a href="#">
                       <im> <img class="pequeña" src="Logos/Akatsuki-Logo-PNG-Pic.png" alt="" /></a>
                    <!-- <a class="navbar-brand" href="#">Navbar</a>-->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@
                             <a class="nav-link" href="Carrito.aspx">Ver Carrito</a>
                             <a class="nav-link" href="Login.aspx">Iniciar Sesión</a>                        
                       </div>                            
-                    
+                    </div>  
                 </div>
             </nav>
             <div class="container">
