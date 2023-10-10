@@ -14,7 +14,8 @@ namespace Tp_WEB_Equipo_3
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            string prueba = Request.QueryString["valor"].ToString();
+
    
 
         }
