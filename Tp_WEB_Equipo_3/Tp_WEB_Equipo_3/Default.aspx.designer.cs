@@ -15,12 +15,12 @@ namespace Tp_WEB_Equipo_3
     {
 
         /// <summary>
-        /// dgvarticulos control.
+        /// repRepetidor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgvarticulos;
+        protected global::System.Web.UI.WebControls.Repeater repRepetidor;
     }
 }
