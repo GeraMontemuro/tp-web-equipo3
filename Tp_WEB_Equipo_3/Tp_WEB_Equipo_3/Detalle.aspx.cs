@@ -12,25 +12,31 @@ namespace Tp_WEB_Equipo_3
     public partial class Detalle : System.Web.UI.Page
     {
         private List<Articulo> Listanueva;
-        private Articulo ArticuloDetalle = new Articulo();
+        private List<Imagen> listaimagen = new List<Imagen>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["auxid"] == null) return;
+            string Idaux = (String)Request.QueryString["auxid"];
+
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             Listanueva = articuloNegocio.listar();
+            ImagenNegocio imagennegocio = new ImagenNegocio();
 
-            if (Request.QueryString["auxid"] == null) return;
-            string abc = (String)Request.QueryString["auxid"];
-            ;
+            listaimagen= imagennegocio.listar(Idaux);
 
             foreach (var Articulo in Listanueva)
             {
-                if(Articulo.IDArticulo == int.Parse(abc))
+                if(Articulo.IDArticulo == int.Parse(Idaux))
                 {
-                    TextBox1.Text = Articulo.Nombre;
+                    
+                    
+
                 }
             }
 
         }
+
+      
     }
 }
