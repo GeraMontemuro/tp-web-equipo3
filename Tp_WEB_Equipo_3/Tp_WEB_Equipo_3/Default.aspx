@@ -17,10 +17,8 @@
                     <div class="card-body">
                         <h5 class="card-title"><%#Eval("Nombre") %></h5>
                         <p class="card-text"><%#Eval("Descripcion") %></p>
-                       <%-- <a href="Detalle.aspx?id=<%#Eval("IdArticulo") %>">Ver Detalle</a>--%>
                         <asp:HyperLink ID="lnkDetalleArticulo" runat="server" NavigateUrl='<%# "Detalle.aspx?id=" + Eval("IDArticulo") %>'
                          Text="Ver detalles" />
-
                        <asp:Button Text="Detalle" CssClass="btn btn-primary" runat="server" id="btnDetalle" CommandArgument='<%#Eval("IdArticulo") %>' CommandName="ArtDetalle" OnClick="btnDetalle_Click" />
                     </div>
                 </div>
