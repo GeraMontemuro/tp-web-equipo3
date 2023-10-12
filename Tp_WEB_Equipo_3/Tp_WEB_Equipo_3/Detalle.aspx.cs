@@ -17,22 +17,29 @@ namespace Tp_WEB_Equipo_3
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString["auxid"] == null) return;
-            string Idaux = (String)Request.QueryString["auxid"];
+
+            string Idaux = Request.QueryString["auxid"];
 
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             Listanueva = articuloNegocio.listar();
             ImagenNegocio imagennegocio = new ImagenNegocio();
             listaimagen= imagennegocio.listar(Idaux);
 
-           /* foreach (var Articulo in Listanueva)
+            if (!IsPostBack)
             {
-                if(Articulo.IDArticulo == int.Parse(Idaux))
-                {
-                    
-                    
+                repRepeImagen.DataSource = listaimagen;
+                repRepeImagen.DataBind();
+            }
 
-                }
-            }*/
+            /* foreach (var Articulo in Listanueva)
+             {
+                 if(Articulo.IDArticulo == int.Parse(Idaux))
+                 {
+
+
+
+                 }
+             }*/
 
         }
 

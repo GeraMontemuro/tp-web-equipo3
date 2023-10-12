@@ -23,17 +23,18 @@ namespace negocio
                 {
                     Imagen ImagenArticulos = new Imagen();
 
-
                     ImagenArticulos.IDArticulo = (int)datos.Lector["IDArti"];
+
                     if (!(datos.Lector["UrlI"] is DBNull))
                     {
                         if (ArticuloId == ImagenArticulos.IDArticulo.ToString())
+                        {
                             ImagenArticulos.ImagenUrl = (string)datos.Lector["UrlI"];
                             lista.Add(ImagenArticulos);
+
+                        }
                     }
-
                 }
-
                 return lista;
             }
             catch (Exception ex)
@@ -46,5 +47,7 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
-    }
+
+    
+}
 }

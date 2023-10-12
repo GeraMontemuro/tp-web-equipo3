@@ -8,6 +8,7 @@
 
     <div class="container text-center">
         <div class="row align-items-start">
+
             <div class="col">
                 <div id="carouselExampleIndicators" class="carousel slide">
                     <div class="carousel-indicators">
@@ -16,15 +17,16 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">  
+
                         <%
-                          foreach(dominio.Imagen imagen in listaimagen)
-                          {
-                            %>                            
-                                <img src=<%:imagen.ImagenUrl%> class="d-md-block w-100" alt="...">                            
+                            foreach (dominio.Imagen imagen in listaimagen)
+                            {
+                        %>
+                        <div class="carousel-item active">
+                            <img src="<%:imagen.ImagenUrl%>" class="d-sm-block w-100" alt="...">
+                        </div>
                         <%
-                          }%>
-                          </div>
+                            }%>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -34,9 +36,9 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
-                    </div>
                 </div>
             </div>
+
             <div class="col">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
@@ -50,4 +52,5 @@
             </div>
         </div>
     </div>
+
 </asp:Content>
