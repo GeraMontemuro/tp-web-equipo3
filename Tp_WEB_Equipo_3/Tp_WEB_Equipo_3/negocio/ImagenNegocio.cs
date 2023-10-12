@@ -9,7 +9,7 @@ namespace negocio
 {
     public class ImagenNegocio
     {
-        public List<Imagen> listar(string ArticuloId )
+        public List<Imagen> listar(string ArticuloId)
         {
             List<Imagen> lista = new List<Imagen>();
             AccesoDatos datos = new AccesoDatos();
@@ -18,24 +18,21 @@ namespace negocio
             {
 
                 datos.setearConsulta("Select Ima.Id as IDImagen,Ima.IdArticulo as IDArti,Ima.ImagenUrl as UrlI  from IMAGENES Ima");
-
+                datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
                     Imagen ImagenArticulos = new Imagen();
 
-                  
-                    ImagenArticulos.IDArticulo= (int)datos.Lector["IDArti"];               
-                    if (!(datos.Lector["UrlI"] is DBNull))///ver crear helper para todas los null
+
+                    ImagenArticulos.IDArticulo = (int)datos.Lector["IDArti"];
+                    if (!(datos.Lector["UrlI"] is DBNull))
                     {
-                        if(ArticuloId== ImagenArticulos.IDArticulo.ToString())
-                        ImagenArticulos.ImagenUrl = (string)datos.Lector["ImagenUrl"];
-                        lista.Add(ImagenArticulos);
+                        if (ArticuloId == ImagenArticulos.IDArticulo.ToString())
+                            ImagenArticulos.ImagenUrl = (string)datos.Lector["UrlI"];
+                            lista.Add(ImagenArticulos);
                     }
 
-                   
-
                 }
-
 
                 return lista;
             }
@@ -49,4 +46,5 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+    }
 }

@@ -27,7 +27,6 @@ namespace Tp_WEB_Equipo_3
         protected void btnDetalle_Click(object sender, EventArgs e)
         {
             string valor = ((Button)sender).CommandArgument;
-            //string valor = "1";
             Response.Redirect("Detalle.aspx?auxid=" + valor);
 
         }

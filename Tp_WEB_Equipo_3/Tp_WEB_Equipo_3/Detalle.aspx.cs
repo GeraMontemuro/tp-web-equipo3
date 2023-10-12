@@ -12,7 +12,7 @@ namespace Tp_WEB_Equipo_3
     public partial class Detalle : System.Web.UI.Page
     {
         private List<Articulo> Listanueva;
-        private List<Imagen> listaimagen = new List<Imagen>();
+        public List<Imagen> listaimagen = new List<Imagen>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,10 +22,9 @@ namespace Tp_WEB_Equipo_3
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             Listanueva = articuloNegocio.listar();
             ImagenNegocio imagennegocio = new ImagenNegocio();
-
             listaimagen= imagennegocio.listar(Idaux);
 
-            foreach (var Articulo in Listanueva)
+           /* foreach (var Articulo in Listanueva)
             {
                 if(Articulo.IDArticulo == int.Parse(Idaux))
                 {
@@ -33,7 +32,7 @@ namespace Tp_WEB_Equipo_3
                     
 
                 }
-            }
+            }*/
 
         }
 
