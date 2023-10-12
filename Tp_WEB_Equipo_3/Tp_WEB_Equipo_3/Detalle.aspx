@@ -19,11 +19,11 @@
                     <div class="carousel-inner">
 
                         <%
-                            foreach (dominio.Imagen imagen in listaimagen)
+                            for (int i=0; i<listaimagen.Count;i++)
                             {
                         %>
-                        <div class="carousel-item active">
-                            <img src="<%:imagen.ImagenUrl%>" class="d-sm-block w-100" alt="...">
+                        <div class="carousel-item <%=i ==0? "active":"" %> ">
+                            <img src="<%:listaimagen[i].ImagenUrl%>" class="d-sm-block w-100" alt="...">
                         </div>
                         <%
                             }%>

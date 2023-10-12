@@ -25,22 +25,6 @@ namespace Tp_WEB_Equipo_3
             ImagenNegocio imagennegocio = new ImagenNegocio();
             listaimagen= imagennegocio.listar(Idaux);
 
-            if (!IsPostBack)
-            {
-                repRepeImagen.DataSource = listaimagen;
-                repRepeImagen.DataBind();
-            }
-
-            /* foreach (var Articulo in Listanueva)
-             {
-                 if(Articulo.IDArticulo == int.Parse(Idaux))
-                 {
-
-
-
-                 }
-             }*/
-
         }
 
       
