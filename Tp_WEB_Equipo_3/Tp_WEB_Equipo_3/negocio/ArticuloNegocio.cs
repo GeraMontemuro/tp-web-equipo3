@@ -25,7 +25,7 @@ namespace negocio
             try
             {
 
-                datos.setearConsulta("SELECT Art.Id AS Id, Art.Codigo, Art.Nombre, Art.Descripcion, MIN(Ima.ImagenUrl) AS ImagenUrl,Art.IdMarca ,Mar.Descripcion AS 'Marca', \r\nArt.IdCategoria,Cat.Descripcion AS 'Categoria'FROM ARTICULOS Art \r\nLEFT JOIN IMAGENES Ima ON Art.Id = Ima.IdArticulo\r\nLEFT JOIN MARCAS Mar ON Art.IdMarca=Mar.Id\r\nLEFT JOIN CATEGORIAS Cat ON Art.IdCategoria=Cat.Id\r\nGROUP BY Art.Id, Art.Codigo, Art.Nombre,Art.Descripcion,Mar.Descripcion,Art.IdMarca ,Cat.Descripcion, Art.IdCategoria");
+                datos.setearConsulta("SELECT Art.Id AS Id, Art.Codigo, Art.Nombre, Art.Descripcion, Art.Precio, MIN(Ima.ImagenUrl) AS ImagenUrl,Art.IdMarca ,Mar.Descripcion AS 'Marca', \r\nArt.IdCategoria,Cat.Descripcion AS 'Categoria'FROM ARTICULOS Art \r\nLEFT JOIN IMAGENES Ima ON Art.Id = Ima.IdArticulo\r\nLEFT JOIN MARCAS Mar ON Art.IdMarca=Mar.Id\r\nLEFT JOIN CATEGORIAS Cat ON Art.IdCategoria=Cat.Id\r\nGROUP BY Art.Id, Art.Codigo, Art.Nombre,Art.Descripcion,Mar.Descripcion,Art.IdMarca ,Cat.Descripcion, Art.IdCategoria, Art.Precio");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -48,7 +48,7 @@ namespace negocio
                         Articulo.Marca.Descripcion = (string)datos.Lector["Marca"];
                     }
                     else { Articulo.Marca.Descripcion = "No tiene"; }
-                   
+
                     Articulo.Categoria = new Categoria();
                     Articulo.Categoria.Id = (int)datos.Lector["IdCategoria"];
                     if (!(datos.Lector["Categoria"] is DBNull))///ver crear helper para todas los null
@@ -56,6 +56,8 @@ namespace negocio
                         Articulo.Categoria.Descripcion = (string)datos.Lector["Categoria"];
                     }
                     else { Articulo.Categoria.Descripcion = "No tiene"; }
+
+                    Articulo.Precio = datos.Lector.GetDecimal(datos.Lector.GetOrdinal("Precio"));
                     
                     lista.Add(Articulo);
                 }

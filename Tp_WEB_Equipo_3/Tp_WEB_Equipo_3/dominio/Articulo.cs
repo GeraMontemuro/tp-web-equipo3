@@ -23,7 +23,7 @@ namespace dominio
         public Marca Marca { get; set; }
         [DisplayName("Categoría")]
         public Categoria Categoria{ get; set; }
-        public float Precio { get; set; }
+        public decimal Precio { get; set; }
 
 
         public Articulo()
