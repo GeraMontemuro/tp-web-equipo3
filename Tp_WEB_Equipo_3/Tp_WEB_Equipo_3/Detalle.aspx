@@ -43,21 +43,22 @@
 
             <div class="col">
 
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: auto; max-height: 320px;">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <asp:TextBox ReadOnly="true" ID="TextTitulo" BorderColor="Transparent" runat="server"></asp:TextBox></h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">
-                            <asp:TextBox ReadOnly="true" ID="TextPrecio" BorderColor="Transparent" runat="server"></asp:TextBox></h6>
+                            <asp:TextBox ReadOnly="true" ID="TextTitulo" CssClass="form-control" runat="server"></asp:TextBox>
+                        </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            <asp:TextBox ReadOnly="true" ID="TextPrecio" CssClass="form-control" runat="server"></asp:TextBox>
+                        </h6>
                         <p class="card-text">
-                            <asp:TextBox ID="TextDescripcion" ReadOnly="true" BorderColor="Transparent" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextDescripcion" ReadOnly="true" CssClass="form-control" runat="server"></asp:TextBox>
                         </p>
-                        <%--<a href="#" class="card-link">Card link</a>--%>
-                        <asp:Button ID="btnAgregarCarrito" CssClass="btn btn-primary" Text="Añadir al carrito" runat="server" OnClick="btnAgregarCarrito_Click" />
-                        <%--<a href="#" class="card-link">Another link</a>--%>
-                        <asp:Button ID="btnComprar" CssClass="btn btn-primary" Text="Comprar" runat="server" OnClick="btnComprar_Click"/>
+                        <div class="button-group">
+                            <asp:Button ID="btnAgregarCarrito" CssClass="btn btn-primary" Text="Añadir al carrito" runat="server" OnClick="btnAgregarCarrito_Click" />
+                            <asp:Button ID="btnComprar" CssClass="btn btn-success" Text="Comprar" runat="server" OnClick="btnComprar_Click" />
+                        </div>
                     </div>
-
                 </div>
         </div>
     </div>
