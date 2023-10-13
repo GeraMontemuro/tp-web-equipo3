@@ -23,7 +23,9 @@
                             {
                         %>
                         <div class="carousel-item <%=i ==0? "active":"" %> ">
-                            <img src="<%:listaimagen[i].ImagenUrl%>" class="d-sm-block w-100" alt="...">
+
+                            <img src="<%: listaimagen[i].ImagenUrl %>" class="d-block w-100"
+                                style="width:auto; height:320px" alt="..." />
                         </div>
                         <%
                             }%>
