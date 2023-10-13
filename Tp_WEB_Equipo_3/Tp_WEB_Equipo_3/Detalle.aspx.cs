@@ -42,6 +42,14 @@ namespace Tp_WEB_Equipo_3
 
         }
 
-      
+        protected void btnAgregarCarrito_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnComprar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Carrito.aspx", false);
+        }
     }
 }

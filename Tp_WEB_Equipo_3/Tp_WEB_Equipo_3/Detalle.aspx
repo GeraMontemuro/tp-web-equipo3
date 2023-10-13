@@ -50,8 +50,10 @@
                         <p class="card-text">
                             <asp:TextBox ID="TextDescripcion" ReadOnly="true" BorderColor="Transparent" runat="server"></asp:TextBox>
                         </p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                        <%--<a href="#" class="card-link">Card link</a>--%>
+                        <asp:Button ID="btnAgregarCarrito" CssClass="btn btn-primary" Text="Añadir al carrito" runat="server" OnClick="btnAgregarCarrito_Click" />
+                        <%--<a href="#" class="card-link">Another link</a>--%>
+                        <asp:Button ID="btnComprar" CssClass="btn btn-primary" Text="Comprar" runat="server" OnClick="btnComprar_Click"/>
                     </div>
 
                 </div>
