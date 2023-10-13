@@ -3,8 +3,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>RESUMEN DE COMPRA</h1>
+    <asp:TextBox ID="TextBox1" runat="server" ></asp:TextBox>
+    <asp:Button ID="btnEliminarProducto" CssClass="btn btn-primary" Text="Eliminar" runat="server" OnClick="btnEliminarProducto_Click"/>
 
-    <!--<asp:GridView ID="dgvCarrito"  runat="server" CssClass="table" AutoGenerateColumns="false">
+    <asp:GridView ID="dgvCarrito"  runat="server" CssClass="table" AutoGenerateColumns="false">
         <Columns>
             <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
             <asp:BoundField HeaderText="Marca" DataField="Marca.Descripcion" />
@@ -12,7 +14,7 @@
 
         </Columns>
 
-    </asp:GridView> -->
+    </asp:GridView> 
 
 
 

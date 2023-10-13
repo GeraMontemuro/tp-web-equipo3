@@ -25,7 +25,7 @@
                         <div class="carousel-item <%=i ==0? "active":"" %> ">
 
                             <img src="<%: listaimagen[i].ImagenUrl %>" class="d-block w-100"
-                                style="width:auto; height:320px" alt="..." />
+                                style="width:auto; height:320px" alt="..." onerror="this.src='Logos/free-fire-png-logo-11569068080w6jocjzwuk.png'"/>
                         </div>
                         <%
                             }%>

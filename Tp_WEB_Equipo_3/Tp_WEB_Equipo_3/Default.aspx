@@ -13,7 +13,7 @@
             <ItemTemplate>
                 <div class="col">
                 <div class="card" style="width:300px">
-                    <img src="<%#Eval("UrlImagen") %>" class="card-img-top" style="width:auto; height:300px" alt="...">
+                    <img src="<%#Eval("UrlImagen") %>" class="card-img-top" style="width:auto; height:300px" alt="..." onerror="this.src='Logos/free-fire-png-logo-11569068080w6jocjzwuk.png'">
                     <div class="card-body">
                         <h5 class="card-title"><%#Eval("Nombre") %></h5>
                         <p class="card-text"><%#Eval("Descripcion") %></p>

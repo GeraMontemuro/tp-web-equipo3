@@ -14,6 +14,7 @@ namespace Tp_WEB_Equipo_3
         public Articulo ArtDetalle = new Articulo(); 
         private List<Articulo> Listanueva;
         public List<Imagen> listaimagen = new List<Imagen>();
+        public List<Articulo> ListaDeCarga = new List<Articulo>(); 
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,9 +31,10 @@ namespace Tp_WEB_Equipo_3
             {
                 if (Articulo.IDArticulo == int.Parse(Idaux))
                 {
-                    ArtDetalle.Descripcion = Articulo.Descripcion;
-                    ArtDetalle.Nombre = Articulo.Nombre;
-                    ArtDetalle.Precio = Articulo.Precio;
+                    ArtDetalle.IDArticulo = Articulo.IDArticulo;
+                    ArtDetalle.Marca = Articulo.Marca;
+                    ArtDetalle.Categoria = Articulo.Categoria;
+                    ArtDetalle.CodigoArticulo = Articulo.CodigoArticulo;
                 }
             }
 
@@ -44,12 +46,23 @@ namespace Tp_WEB_Equipo_3
 
         protected void btnAgregarCarrito_Click(object sender, EventArgs e)
         {
-
+            if (Session["listafinal"] != null)
+            {
+                CarritoNegocio Negocio = new CarritoNegocio();
+                List<Articulo> Temporal = (List<Articulo>)Session["listafinal"];
+                Temporal.Add(Negocio.Agregar(ArtDetalle.IDArticulo));
+            }
+            else
+            {
+                CarritoNegocio Negocio = new CarritoNegocio();
+                Session.Add("listafinal", (Negocio.Cargar(ArtDetalle.IDArticulo, ListaDeCarga)));
+            }
         }
 
         protected void btnComprar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Carrito.aspx", false);
+            string ID = ArtDetalle.IDArticulo.ToString();
+            Response.Redirect("Carrito.aspx?id=" + ID);
         }
     }
 }
