@@ -32,9 +32,12 @@ namespace Tp_WEB_Equipo_3
                 if (Articulo.IDArticulo == int.Parse(Idaux))
                 {
                     ArtDetalle.IDArticulo = Articulo.IDArticulo;
+                    ArtDetalle.CodigoArticulo = Articulo.CodigoArticulo;
+                    ArtDetalle.Nombre = Articulo.Nombre;
+                    ArtDetalle.Descripcion = Articulo.Descripcion;
                     ArtDetalle.Marca = Articulo.Marca;
                     ArtDetalle.Categoria = Articulo.Categoria;
-                    ArtDetalle.CodigoArticulo = Articulo.CodigoArticulo;
+                    ArtDetalle.Precio = Articulo.Precio;
                 }
             }
 
