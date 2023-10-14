@@ -13,7 +13,32 @@
         img.pequeña {
             width: 50px;
             height: 30px;
-        }           
+        }
+
+        body {
+            background-color: #333;
+        }
+
+        #sidebar {
+            position: fixed;
+            margin-left: 0px;
+            width: 110px;
+            background-color: #333;
+            color: #fff;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+            #sidebar a {
+                padding: 15px 20px;
+                text-decoration: none;
+                color: #fff;
+                display: block;
+            }
+
+                #sidebar a:hover {
+                    background-color: #555;
+                }
     </style>
 </head>
 <body>
@@ -22,8 +47,9 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
                     <a href="#">
-                      <im> <img class="pequeña" src="Logos/Akatsuki-Logo-PNG-Pic.png" alt=""  /></a>
-                   <!-- <a class="navbar-brand" href="#">Navbar</a>-->
+                        <im>
+                            <img class="pequeña" src="Logos/Akatsuki-Logo-PNG-Pic.png" alt="" /></a>
+                    <!-- <a class="navbar-brand" href="#">Navbar</a>-->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -31,11 +57,26 @@
                         <div class="navbar-nav">
                             <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
                             <a class="nav-link" href="Carrito.aspx">Ver Carrito</a>
-                            <a class="nav-link" href="Login.aspx">Iniciar Sesión</a>                        
-                      </div>                            
-                    </div>  
+                            <a class="nav-link" href="Login.aspx">Iniciar Sesión</a>
+                        </div>
+                    </div>
                 </div>
             </nav>
+            <div id="sidebar">
+            <%-- public int IDArticulo { get; set; }
+                 public string CodigoArticulo { get; set; }
+                 public string Nombre { get; set; }
+                 public string Descripcion { get; set; }
+                 public string UrlImagen { get; set; }
+                 public Marca Marca { get; set; }
+                 public Categoria Categoria{ get; set; }
+                 public decimal Precio { get; set; }--%>
+
+                <a href="#">Inicio</a>
+                <a href="#">Productos</a>
+                <a href="#marcas">Marcas</a>
+                <a href="#categorias">Categorías</a>
+            </div>
             <div class="container">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
