@@ -45,14 +45,32 @@ namespace Tp_WEB_Equipo_3
 
         protected void btnFiltro_Click(object sender, EventArgs e)
         {
-            Articulo artFiltrado = new Articulo();
+            ArticuloNegocio artNegocio = new ArticuloNegocio();
+            List<Articulo> listaArt = new List<Articulo>();
+            List<Articulo> listaFiltrada = new List<Articulo>();
+
+            listaArt = artNegocio.listar();
+
+            Articulo artFiltrado = new Articulo
+            {
+                Marca = new Marca(),         
+                Categoria = new Categoria() 
+            };
 
             artFiltrado.Marca.Descripcion = ddlMarca.SelectedValue;
             artFiltrado.Categoria.Descripcion = ddlCategoria.SelectedValue;
 
+            foreach( Articulo art in listaArt)
+            {
+                if(art.Marca.Descripcion == artFiltrado.Marca.Descripcion && art.Categoria.Descripcion == artFiltrado.Categoria.Descripcion)
+                {
+                    listaFiltrada.Add(art);
+                }
+            }
+
             
-            Session["ArticuloFiltrado"]= artFiltrado;
-            Response.Redirect("Default.aspx", false);
+            Session["ArticuloFiltrado"]= listaFiltrada;
+            Response.Redirect("Default.aspx?bandera=" + "1");
 
 
         }

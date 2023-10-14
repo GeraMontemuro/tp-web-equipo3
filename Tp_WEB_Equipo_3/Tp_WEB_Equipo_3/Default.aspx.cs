@@ -2,6 +2,7 @@
 using negocio;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Web.UI.WebControls;
 
 namespace Tp_WEB_Equipo_3
@@ -14,24 +15,29 @@ namespace Tp_WEB_Equipo_3
         {
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             ListaArticulo = articuloNegocio.listar();
+            List<Articulo> listaFiltrada = new List<Articulo>();
+            
+            string bandera =  Request.QueryString["bandera"];
 
             if (!IsPostBack)
             {
                 repRepetidor.DataSource = ListaArticulo;
                 repRepetidor.DataBind();
             }
-            
-            if(!IsPostBack)
+
+
+            if (bandera == "1")
             {
-                Articulo art = (Articulo)Session["ArticuloFiltrado"];
-                if(art != null)
+                listaFiltrada = (List<Articulo>)Session["ArticuloFiltrado"];
+                bandera = "0";
+                if (listaFiltrada != null)
                 {
-                    repRepetidor.DataSource = art;
+                    repRepetidor.DataSource = listaFiltrada;
                     repRepetidor.DataBind();
                 }
-
             }
-            
+                      
+
         }
 
         protected void btnDetalle_Click(object sender, EventArgs e)

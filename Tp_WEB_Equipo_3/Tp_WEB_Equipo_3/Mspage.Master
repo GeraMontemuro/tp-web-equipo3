@@ -22,7 +22,7 @@
         #sidebar {
             position: fixed;
             margin-left: 0px;
-            width: 110px;
+            width: 115px;
             background-color: #333;
             color: #fff;
             height: 100%;
