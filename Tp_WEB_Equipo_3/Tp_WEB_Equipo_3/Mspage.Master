@@ -62,28 +62,25 @@
                     </div>
                 </div>
             </nav>
-            <div id="sidebar">
-            <%-- public int IDArticulo { get; set; }
-                 public string CodigoArticulo { get; set; }
-                 public string Nombre { get; set; }
-                 public string Descripcion { get; set; }
-                 public string UrlImagen { get; set; }
-                 public Marca Marca { get; set; }
-                 public Categoria Categoria{ get; set; }
-                 public decimal Precio { get; set; }--%>
 
-                <a href="#">Inicio</a>
-                <a href="#">Productos</a>
-                <a href="#marcas">Marcas</a>
-                <a href="#categorias">Categorías</a>
+       <div id="sidebar">
+
+           <br />
+
+            <label for="ddlMarca" class="form-label">Marca</label>
+            <asp:DropDownList ID="ddlMarca" runat="server" CssClass="form-select" AutoPostBack="true"></asp:DropDownList>
+
+            <label for="ddlCategoria" class="form-label">Categoría</label>
+            <asp:DropDownList ID="ddlCategoria" runat="server" CssClass="form-select" AutoPostBack="true">
+            </asp:DropDownList>
             </div>
-            <div class="container">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-            </div>
-            <footer>
-                <hr />
-            </footer>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            <hr />
+        </footer>
         </div>
     </form>
 </body>
