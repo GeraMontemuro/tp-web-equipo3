@@ -20,6 +20,8 @@ namespace Tp_WEB_Equipo_3
              * pasar ese filtro no se de que manera el listado de default
              * mostrar desde default
              */
+            string bandera = "0";
+
             if (!IsPostBack)
             {
                 Marca marcasFiltro = new Marca();
@@ -49,6 +51,8 @@ namespace Tp_WEB_Equipo_3
             List<Articulo> listaArt = new List<Articulo>();
             List<Articulo> listaFiltrada = new List<Articulo>();
 
+            string valor = "0";
+
             listaArt = artNegocio.listar();
 
             Articulo artFiltrado = new Articulo
@@ -65,12 +69,13 @@ namespace Tp_WEB_Equipo_3
                 if(art.Marca.Descripcion == artFiltrado.Marca.Descripcion && art.Categoria.Descripcion == artFiltrado.Categoria.Descripcion)
                 {
                     listaFiltrada.Add(art);
+                    valor = "1";
                 }
             }
 
             
             Session["ArticuloFiltrado"]= listaFiltrada;
-            Response.Redirect("Default.aspx?bandera=" + "1");
+            Response.Redirect("Default.aspx?bandera=" + valor );
 
 
         }

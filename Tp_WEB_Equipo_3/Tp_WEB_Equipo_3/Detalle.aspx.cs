@@ -54,11 +54,13 @@ namespace Tp_WEB_Equipo_3
                 CarritoNegocio Negocio = new CarritoNegocio();
                 List<Articulo> Temporal = (List<Articulo>)Session["listafinal"];
                 Temporal.Add(Negocio.Buscar(ArtDetalle.IDArticulo));
+                Response.Redirect("Default.aspx");
             }
             else
             {
                 CarritoNegocio Negocio = new CarritoNegocio();
                 Session.Add("listafinal", (Negocio.Cargar(ArtDetalle.IDArticulo, ListaDeCarga)));
+                Response.Redirect("Default.aspx");
             }
         }
 

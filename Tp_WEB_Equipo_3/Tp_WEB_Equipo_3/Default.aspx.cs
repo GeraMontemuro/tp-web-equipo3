@@ -18,35 +18,32 @@ namespace Tp_WEB_Equipo_3
             List<Articulo> listaFiltrada = new List<Articulo>();
 
             string bandera = Request.QueryString["bandera"];
-           
+
 
             if (!IsPostBack)
             {
                 repRepetidor.DataSource = ListaArticulo;
                 repRepetidor.DataBind();
-            }
 
-
-            if (bandera == "1")
-            {
-                listaFiltrada = (List<Articulo>)Session["ArticuloFiltrado"];
-                bandera = "0";
-                if (listaFiltrada != null)
+                if (bandera == "1")
                 {
-                    repRepetidor.DataSource = listaFiltrada;
-                    repRepetidor.DataBind();
+                    listaFiltrada = (List<Articulo>)Session["ArticuloFiltrado"];
+
+                    if (listaFiltrada != null)
+                    {
+                        repRepetidor.DataSource = listaFiltrada;
+                        repRepetidor.DataBind();
+                    }
                 }
             }
-                      
-
         }
 
         protected void btnDetalle_Click(object sender, EventArgs e)
         {
             string valor = ((Button)sender).CommandArgument;
-            Response.Redirect("Detalle.aspx?auxid=" + valor );
+            Response.Redirect("Detalle.aspx?auxid=" + valor);
 
         }
-                
+
     }
 }
