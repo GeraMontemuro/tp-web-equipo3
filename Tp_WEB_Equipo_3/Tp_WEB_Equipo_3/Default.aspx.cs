@@ -16,8 +16,9 @@ namespace Tp_WEB_Equipo_3
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             ListaArticulo = articuloNegocio.listar();
             List<Articulo> listaFiltrada = new List<Articulo>();
-            
-            string bandera =  Request.QueryString["bandera"];
+
+            string bandera = Request.QueryString["bandera"];
+           
 
             if (!IsPostBack)
             {
@@ -43,7 +44,7 @@ namespace Tp_WEB_Equipo_3
         protected void btnDetalle_Click(object sender, EventArgs e)
         {
             string valor = ((Button)sender).CommandArgument;
-            Response.Redirect("Detalle.aspx?auxid=" + valor);
+            Response.Redirect("Detalle.aspx?auxid=" + valor );
 
         }
                 

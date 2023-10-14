@@ -4,13 +4,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>RESUMEN DE COMPRA</h1>
     <asp:TextBox ID="TextBox1" runat="server" ></asp:TextBox>
-    <asp:Button ID="btnEliminarProducto" CssClass="btn btn-primary" Text="Eliminar" runat="server" OnClick="btnEliminarProducto_Click"/>
-
-    <asp:GridView ID="dgvCarrito"  runat="server" CssClass="table" AutoGenerateColumns="false">
+    
+    <asp:GridView ID="dgvCarrito"  runat="server" CssClass="table" DataKeyNames="IDArticulo" AutoGenerateColumns="false" OnSelectedIndexChanged="dgvCarrito_SelectedIndexChanged">
         <Columns>
             <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
             <asp:BoundField HeaderText="Marca" DataField="Marca.Descripcion" />
             <asp:BoundField HeaderText="Categoria" DataField="Categoria.Descripcion" />
+            <asp:CommandField ShowSelectButton="true" SelectText="Eliminar Producto" HeaderText="Acción" /> 
 
         </Columns>
 

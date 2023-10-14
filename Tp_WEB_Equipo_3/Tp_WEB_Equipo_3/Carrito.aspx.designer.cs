@@ -24,15 +24,6 @@ namespace Tp_WEB_Equipo_3
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// btnEliminarProducto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEliminarProducto;
-
-        /// <summary>
         /// dgvCarrito control.
         /// </summary>
         /// <remarks>

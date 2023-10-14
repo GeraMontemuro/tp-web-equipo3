@@ -12,9 +12,11 @@ namespace Tp_WEB_Equipo_3
     public partial class Compra : System.Web.UI.Page
     {
         public Articulo art = new Articulo();
-        public List<Articulo> ListadeCompra = new List<Articulo> ();
+        public List<Articulo> ListadeCompra = new List<Articulo>();
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
             try
             {
 
@@ -30,9 +32,11 @@ namespace Tp_WEB_Equipo_3
                 }
                 else
                 {
+
                     CarritoNegocio Negocio = new CarritoNegocio();
                     List<Articulo> Temporal1 = (List<Articulo>)Session["listafinal"];
-                    Temporal1.Add(Negocio.Agregar(Idaux));
+                    Temporal1.Add(Negocio.Buscar(Idaux));
+
                 }
 
 
@@ -52,15 +56,27 @@ namespace Tp_WEB_Equipo_3
                 dgvCarrito.DataBind();
 
             }
-        }
-
-        protected void Unnamed_Click(object sender, EventArgs e)
-        {
 
         }
 
-        protected void btnEliminarProducto_Click(object sender, EventArgs e)
+        protected void dgvCarrito_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            var algo = dgvCarrito.SelectedRow.Cells[0].Text;
+            var id = dgvCarrito.SelectedDataKey.Value.ToString();
+            Articulo aux = new Articulo();
+
+
+            List<Articulo> carrito = (List<Articulo>)Session["listafinal"];
+            aux = carrito.Find(x => x.IDArticulo == int.Parse(id));
+            if (aux != null)
+            {
+                carrito.Remove(aux);
+                Session.Add("listafinal", carrito);
+                //dgvCarrito.DataSource = carrito;
+                //dgvCarrito.DataBind();
+            }
+
 
         }
     }

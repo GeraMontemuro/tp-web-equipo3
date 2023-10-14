@@ -42,7 +42,7 @@ namespace negocio
             return lista;
 
         }
-        public Articulo Agregar(int ID)
+        public Articulo Buscar(int ID)
         {
 
             try
@@ -66,15 +66,7 @@ namespace negocio
             }
             return art1;
 
-
-
-        }
-
-        public void Eliminar(int ID, List<Articulo> lista)
-        {
-            ///VIENE DEL BOTON EL ID Y LA LISTA BUSCA EL ID EN LA LISTA LO ELIMINA Y RETORNA LA LISTA NUEVA
-
-        }
+        }               
 
     }
 }

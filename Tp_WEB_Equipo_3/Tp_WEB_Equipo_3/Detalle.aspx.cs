@@ -53,7 +53,7 @@ namespace Tp_WEB_Equipo_3
             {
                 CarritoNegocio Negocio = new CarritoNegocio();
                 List<Articulo> Temporal = (List<Articulo>)Session["listafinal"];
-                Temporal.Add(Negocio.Agregar(ArtDetalle.IDArticulo));
+                Temporal.Add(Negocio.Buscar(ArtDetalle.IDArticulo));
             }
             else
             {
