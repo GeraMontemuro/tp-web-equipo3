@@ -63,24 +63,27 @@
                 </div>
             </nav>
 
-       <div id="sidebar">
+            <div id="sidebar">
 
-           <br />
+                <br />
 
-            <label for="ddlMarca" class="form-label">Marca</label>
-            <asp:DropDownList ID="ddlMarca" runat="server" CssClass="form-select" AutoPostBack="true"></asp:DropDownList>
+                <label for="ddlMarca" class="form-label">Marca</label>
+                <asp:DropDownList ID="ddlMarca" runat="server" CssClass="form-select" AutoPostBack="true"></asp:DropDownList>
 
-            <label for="ddlCategoria" class="form-label">Categoría</label>
-            <asp:DropDownList ID="ddlCategoria" runat="server" CssClass="form-select" AutoPostBack="true">
-            </asp:DropDownList>
+                <label for="ddlCategoria" class="form-label">Categoría</label>
+                <asp:DropDownList ID="ddlCategoria" runat="server" CssClass="form-select" AutoPostBack="true">
+                </asp:DropDownList>
+                <div class="mb-3">
+                    <asp:Button Text="Aplicar Filtro" CssClass="btn btn-primary" ID="btnFiltro" OnClick="btnFiltro_Click" runat="server" />
+                </div>
             </div>
-        <div class="container">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-        <footer>
-            <hr />
-        </footer>
+            <div class="container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <footer>
+                <hr />
+            </footer>
         </div>
     </form>
 </body>

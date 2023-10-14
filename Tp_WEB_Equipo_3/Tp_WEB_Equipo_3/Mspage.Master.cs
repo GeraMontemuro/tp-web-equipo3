@@ -11,7 +11,7 @@ namespace Tp_WEB_Equipo_3
 {
     public partial class Site1 : System.Web.UI.MasterPage
     {
-        public List<Articulo> ListaFiltro { get; set; }
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             /* traer la lista de articulos 
@@ -20,24 +20,40 @@ namespace Tp_WEB_Equipo_3
              * pasar ese filtro no se de que manera el listado de default
              * mostrar desde default
              */
-            Marca marcasFiltro = new Marca();
-            MarcaNegocio marNegFiltro = new MarcaNegocio();
-            List<Marca>listaMarcas= new List<Marca>();
+            if (!IsPostBack)
+            {
+                Marca marcasFiltro = new Marca();
+                MarcaNegocio marNegFiltro = new MarcaNegocio();
+                List<Marca> listaMarcas = new List<Marca>();
 
-            Categoria categoriaFiltro = new Categoria();
-            CategoriaNegocio marCatFiltro = new CategoriaNegocio();
-            List<Categoria> listaCategorias = new List<Categoria>();
+                Categoria categoriaFiltro = new Categoria();
+                CategoriaNegocio marCatFiltro = new CategoriaNegocio();
+                List<Categoria> listaCategorias = new List<Categoria>();
 
-            listaMarcas = marNegFiltro.listar();
-            listaCategorias = marCatFiltro.listar();    
+                listaMarcas = marNegFiltro.listar();
+                listaCategorias = marCatFiltro.listar();
 
-            ddlMarca.DataSource = listaMarcas;
-            ddlMarca.DataValueField = "Descripcion";
-            ddlMarca.DataBind();
+                ddlMarca.DataSource = listaMarcas;
+                ddlMarca.DataValueField = "Descripcion";
+                ddlMarca.DataBind();
 
-            ddlCategoria.DataSource = listaCategorias;
-            ddlCategoria.DataValueField = "Descripcion";
-            ddlCategoria.DataBind();
+                ddlCategoria.DataSource = listaCategorias;
+                ddlCategoria.DataValueField = "Descripcion";
+                ddlCategoria.DataBind();
+            }
+        }
+
+        protected void btnFiltro_Click(object sender, EventArgs e)
+        {
+            Articulo artFiltrado = new Articulo();
+
+            artFiltrado.Marca.Descripcion = ddlMarca.SelectedValue;
+            artFiltrado.Categoria.Descripcion = ddlCategoria.SelectedValue;
+
+            
+            Session["ArticuloFiltrado"]= artFiltrado;
+            Response.Redirect("Default.aspx", false);
+
 
         }
     }

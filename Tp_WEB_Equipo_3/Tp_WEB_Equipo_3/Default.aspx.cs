@@ -13,13 +13,23 @@ namespace Tp_WEB_Equipo_3
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
-
             ListaArticulo = articuloNegocio.listar();
 
             if (!IsPostBack)
             {
                 repRepetidor.DataSource = ListaArticulo;
                 repRepetidor.DataBind();
+            }
+            
+            if(!IsPostBack)
+            {
+                Articulo art = (Articulo)Session["ArticuloFiltrado"];
+                if(art != null)
+                {
+                    repRepetidor.DataSource = art;
+                    repRepetidor.DataBind();
+                }
+
             }
             
         }
