@@ -77,6 +77,10 @@
     <Content Include="Logos\logocarrito.jpg" />
     <Content Include="Logos\logocarrito2.png.jpg" />
     <Content Include="Logos\png-clipart-computer-icons-e-commerce-shopping-cart-online-shopping-supermarket-shopping-retail-area.png" />
+    <Content Include="Logos\pngwing.com %281%29.png" />
+    <Content Include="Logos\pngwing.com %282%29.png" />
+    <Content Include="Logos\pngwing.com %284%29.png" />
+    <Content Include="Logos\pngwing.com.png" />
     <Content Include="NewLogin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>

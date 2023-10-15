@@ -58,6 +58,7 @@ namespace Tp_WEB_Equipo_3
                 List<Articulo> Temporal = (List<Articulo>)Session["listafinal"];
                 Temporal.Add(Negocio.Buscar(ArtDetalle.IDArticulo));
                 Response.Redirect("Default.aspx");
+                
             }
             else
             {
