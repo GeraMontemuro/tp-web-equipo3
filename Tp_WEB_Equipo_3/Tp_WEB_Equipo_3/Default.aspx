@@ -22,12 +22,10 @@
                         <ItemTemplate>
                             <div class="col" width:1200>
                                 <div class="card" style="width: 300px">
-                                    <img src="<%#Eval("UrlImagen") %>" class="card-img-top" style="width: auto; height: 300px" alt="..." onerror="this.src='Logos/free-fire-png-logo-11569068080w6jocjzwuk.png'">
+                                    <img src="<%#Eval("UrlImagen") %>" class="card-img-top" style="width: auto; height: 300px" alt="..." onerror="this.src='Logos/error.jpg'" />
                                     <div class="card-body">
                                         <h5 class="card-title"><%#Eval("Nombre") %></h5>
                                         <p class="card-text"><%#Eval("Descripcion") %></p>
-                                        <asp:HyperLink ID="lnkDetalleArticulo" runat="server" NavigateUrl='<%# "Detalle.aspx?id=" + Eval("IDArticulo") %>'
-                                            Text="Ver detalles" />
                                         <asp:Button Text="Detalle" CssClass="btn btn-primary" runat="server" ID="btnDetalle" CommandArgument='<%#Eval("IdArticulo") %>' CommandName="ArtDetalle" OnClick="btnDetalle_Click" />
                                     </div>
                                 </div>

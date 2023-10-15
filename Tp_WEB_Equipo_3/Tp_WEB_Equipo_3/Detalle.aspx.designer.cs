@@ -24,6 +24,24 @@ namespace Tp_WEB_Equipo_3
         protected global::System.Web.UI.WebControls.TextBox TextTitulo;
 
         /// <summary>
+        /// TextMarca control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextMarca;
+
+        /// <summary>
+        /// TextCategoria control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextCategoria;
+
+        /// <summary>
         /// TextPrecio control.
         /// </summary>
         /// <remarks>

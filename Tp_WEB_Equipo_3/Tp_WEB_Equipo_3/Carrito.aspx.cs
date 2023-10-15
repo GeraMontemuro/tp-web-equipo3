@@ -98,9 +98,6 @@ namespace Tp_WEB_Equipo_3
                  PrecioTotal = string.Format("{0:C}", auxprecio);
                     TextPrecioTotal.Text = PrecioTotal;
             }
-            // PrecioTotal = string.Format("{0:C}", auxprecio);
-            //TextPrecioTotal.Text = PrecioTotal;
-
         }
 
 
@@ -116,8 +113,7 @@ namespace Tp_WEB_Equipo_3
             {
                 carrito.Remove(aux);
                 Session["listafinal"] = carrito;
-                //dgvCarrito.DataSource = carrito;
-                //dgvCarrito.DataBind();
+                
         
 
             if (carrito != null)

@@ -11,11 +11,6 @@
 
             <div class="col">
                 <div id="carouselExampleIndicators" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
                     <div class="carousel-inner">
 
                         <%
@@ -25,7 +20,7 @@
                         <div class="carousel-item <%=i ==0? "active":"" %> ">
 
                             <img src="<%: listaimagen[i].ImagenUrl %>" class="d-block w-100"
-                                style="width:auto; height:320px" alt="..." onerror="this.src='Logos/free-fire-png-logo-11569068080w6jocjzwuk.png'"/>
+                                style="width:auto; height:auto" alt="..." onerror="this.src='Logos/error.jpg'" />
                         </div>
                         <%
                             }%>
@@ -47,6 +42,8 @@
                     <div class="card-body">
                         <h5 class="card-title">
                             <asp:TextBox ReadOnly="true" ID="TextTitulo" CssClass="form-control" runat="server"></asp:TextBox>
+                             <asp:TextBox ID="TextMarca" ReadOnly="true" CssClass="form-control" runat="server"></asp:TextBox>
+                             <asp:TextBox ID="TextCategoria" ReadOnly="true" CssClass="form-control" runat="server"></asp:TextBox>
                         </h5>
                         <h6 class="card-subtitle mb-2 text-muted">
                             <asp:TextBox ReadOnly="true" ID="TextPrecio" CssClass="form-control" runat="server"></asp:TextBox>
