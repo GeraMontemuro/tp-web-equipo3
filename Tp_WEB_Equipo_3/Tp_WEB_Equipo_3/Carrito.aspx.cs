@@ -17,7 +17,7 @@ namespace Tp_WEB_Equipo_3
             string PrecioTotal;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+           
             if (!IsPostBack)
             {
 

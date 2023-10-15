@@ -74,6 +74,8 @@
     <Content Include="Logos\Akatsuki-Logo-PNG-Pic.png" />
     <Content Include="Logos\error.jpg" />
     <Content Include="Logos\free-fire-png-logo-11569068080w6jocjzwuk.png" />
+    <Content Include="Logos\logocarrito.jpg" />
+    <Content Include="Logos\logocarrito2.png.jpg" />
     <Content Include="Logos\png-clipart-computer-icons-e-commerce-shopping-cart-online-shopping-supermarket-shopping-retail-area.png" />
     <Content Include="NewLogin.aspx" />
     <Content Include="Web.config" />

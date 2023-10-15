@@ -60,10 +60,15 @@
                             <a class="nav-link" href="Login.aspx">Iniciar Sesión</a>
                         </div>
                     </div>
-                    <a href="ruta_del_carrito.html">
-                        <i class="icono-carrito"></i>
-                        <span id="cantidad-productos-carrito">0</span>
-                    </a>
+                    <div>
+                        <a href="#">
+                            <im>
+                                <img class="pequeña" src="Logos/logocarrito2.png" alt="" /></a>
+                        <a href="ruta_del_carrito.html">
+    <i class="icono-carrito"></i>
+    <span id="cantidadproductoscarrito">0 </span>
+</a>
+                   </div>
                 </div>
             </nav>
 
