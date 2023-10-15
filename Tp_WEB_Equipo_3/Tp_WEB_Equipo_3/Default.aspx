@@ -20,6 +20,7 @@
                     <asp:Repeater ID="repRepetidor" runat="server">
 
                         <ItemTemplate>
+
                             <div class="col" width:1200>
                                 <div class="card" style="width: 300px">
                                     <img src="<%#Eval("UrlImagen") %>" class="card-img-top" style="width: auto; height: 300px" alt="..." onerror="this.src='Logos/error.jpg'" />
