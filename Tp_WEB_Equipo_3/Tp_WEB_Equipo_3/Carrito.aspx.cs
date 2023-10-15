@@ -15,46 +15,48 @@ namespace Tp_WEB_Equipo_3
         public List<Articulo> ListadeCompra = new List<Articulo>();
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
-            try
+            if (!IsPostBack)
             {
 
-                int Idaux = int.Parse(Request.QueryString["id"]);
-                art.IDArticulo = Idaux;
-
-
-
-                if (Session["listafinal"] == null)
-                {
-                    CarritoNegocio Negocio = new CarritoNegocio();
-                    Session.Add("listafinal", (Negocio.Cargar(Idaux, ListadeCompra)));
-                }
-                else
+                try
                 {
 
-                    CarritoNegocio Negocio = new CarritoNegocio();
-                    List<Articulo> Temporal1 = (List<Articulo>)Session["listafinal"];
-                    Temporal1.Add(Negocio.Buscar(Idaux));
+                    int Idaux = int.Parse(Request.QueryString["id"]);
+                    art.IDArticulo = Idaux;
+
+
+
+                    if (Session["listafinal"] == null)
+                    {
+                        CarritoNegocio Negocio = new CarritoNegocio();
+                        Session.Add("listafinal", (Negocio.Cargar(Idaux, ListadeCompra)));
+                    }
+                    else
+                    {
+
+                        CarritoNegocio Negocio = new CarritoNegocio();
+                        List<Articulo> Temporal1 = (List<Articulo>)Session["listafinal"];
+                        Temporal1.Add(Negocio.Buscar(Idaux));
+
+                    }
+
+
+                    List<Articulo> Temporal = (List<Articulo>)Session["listafinal"];
+
+
+                    dgvCarrito.DataSource = Temporal;
+                    dgvCarrito.DataBind();
+
 
                 }
+                catch (Exception)
+                {
+                    List<Articulo> Temporal = (List<Articulo>)Session["listafinal"];
 
+                    dgvCarrito.DataSource = Temporal;
+                    dgvCarrito.DataBind();
 
-                List<Articulo> Temporal = (List<Articulo>)Session["listafinal"];
-
-
-                dgvCarrito.DataSource = Temporal;
-                dgvCarrito.DataBind();
-
-
-            }
-            catch (Exception)
-            {
-                List<Articulo> Temporal = (List<Articulo>)Session["listafinal"];
-
-                dgvCarrito.DataSource = Temporal;
-                dgvCarrito.DataBind();
-
+                }
             }
 
         }
@@ -62,21 +64,18 @@ namespace Tp_WEB_Equipo_3
         protected void dgvCarrito_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            var algo = dgvCarrito.SelectedRow.Cells[0].Text;
             var id = dgvCarrito.SelectedDataKey.Value.ToString();
             Articulo aux = new Articulo();
-
 
             List<Articulo> carrito = (List<Articulo>)Session["listafinal"];
             aux = carrito.Find(x => x.IDArticulo == int.Parse(id));
             if (aux != null)
             {
                 carrito.Remove(aux);
-                Session.Add("listafinal", carrito);
-                //dgvCarrito.DataSource = carrito;
-                //dgvCarrito.DataBind();
+                Session["listafinal"] = carrito;
+                dgvCarrito.DataSource = carrito;
+                dgvCarrito.DataBind();
             }
-
 
         }
     }
