@@ -2,10 +2,13 @@
 using negocio;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
+
 
 namespace Tp_WEB_Equipo_3
 {
@@ -14,9 +17,11 @@ namespace Tp_WEB_Equipo_3
         public Articulo art = new Articulo();
         public List<Articulo> ListadeCompra = new List<Articulo>();
             decimal auxprecio = 0;
+        int contador;
             string PrecioTotal;
         protected void Page_Load(object sender, EventArgs e)
         {
+            
            
             if (!IsPostBack)
             {
@@ -71,6 +76,9 @@ namespace Tp_WEB_Equipo_3
                         foreach (Articulo item in Temporal2)
                         {
                             auxprecio += item.Precio;
+                            contador = Temporal2.Count();
+                            FuncionGlobal.CantidadTotalAsignada (contador);
+                            FuncionGlobal.CantidadTotal();
                         }
 
                     }
@@ -91,6 +99,10 @@ namespace Tp_WEB_Equipo_3
                     foreach (Articulo item in Temporal2)
                     {
                         auxprecio += item.Precio;
+                        //contador = Temporal2.Count();
+                        FuncionGlobal.CantidadTotalAsignada(contador);
+                        FuncionGlobal.CantidadTotal();
+                       
                     }
 
                 }
@@ -98,6 +110,7 @@ namespace Tp_WEB_Equipo_3
                  PrecioTotal = string.Format("{0:C}", auxprecio);
                     TextPrecioTotal.Text = PrecioTotal;
             }
+           
         }
 
 
@@ -121,9 +134,13 @@ namespace Tp_WEB_Equipo_3
                 foreach (Articulo item in carrito)
                 {
                     auxprecio += item.Precio;
-                }
+                    contador = carrito.Count();
+                    FuncionGlobal.CantidadTotalAsignada(contador);
+                        FuncionGlobal.CantidadTotal();
+                    }
                     PrecioTotal = string.Format("{0:C}", auxprecio);
                     TextPrecioTotal.Text = PrecioTotal;
+
 
             }
             dgvCarrito.DataSource = carrito;
@@ -132,5 +149,6 @@ namespace Tp_WEB_Equipo_3
 
 
         }
+       
     }
 }

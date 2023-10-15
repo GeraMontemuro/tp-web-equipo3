@@ -57,6 +57,9 @@ namespace Tp_WEB_Equipo_3
                 CarritoNegocio Negocio = new CarritoNegocio();
                 List<Articulo> Temporal = (List<Articulo>)Session["listafinal"];
                 Temporal.Add(Negocio.Buscar(ArtDetalle.IDArticulo));
+                FuncionGlobal.Valor += 1;
+                FuncionGlobal.CantidadTotalAsignada(FuncionGlobal.Valor);
+                FuncionGlobal.CantidadTotal();
                 Response.Redirect("Default.aspx");
                 
             }
@@ -64,6 +67,9 @@ namespace Tp_WEB_Equipo_3
             {
                 CarritoNegocio Negocio = new CarritoNegocio();
                 Session.Add("listafinal", (Negocio.Cargar(ArtDetalle.IDArticulo, ListaDeCarga)));
+                FuncionGlobal.Valor += 1;
+                FuncionGlobal.CantidadTotalAsignada(FuncionGlobal.Valor);
+                FuncionGlobal.CantidadTotal();
                 Response.Redirect("Default.aspx");
             }
         }
@@ -71,6 +77,7 @@ namespace Tp_WEB_Equipo_3
         protected void btnComprar_Click(object sender, EventArgs e)
         {
             string ID = ArtDetalle.IDArticulo.ToString();
+            FuncionGlobal.CantidadTotal();
             Response.Redirect("Carrito.aspx?id=" + ID);
         }
     }

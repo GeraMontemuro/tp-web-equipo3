@@ -65,7 +65,7 @@
                             <im>
                                 <img class="pequeña" src="Logos/pngwing.com%20(2).png" alt="" />
                                 <i class="icono-carrito"></i>
-                                <span id="cantidadproductoscarrito">0 </span>
+                                <span id="cantidadproductoscarrito"><%= FuncionGlobal.CantidadTotal()%></span>
                         </a>
                     </div>
                 </div>

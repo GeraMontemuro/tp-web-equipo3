@@ -70,3 +70,18 @@ namespace negocio
 
     }
 }
+
+public static class FuncionGlobal
+{
+    public static int Valor = 0;
+
+    public static int CantidadTotal()
+    {
+        return Valor;
+    }
+    public static void CantidadTotalAsignada(int cont)
+    {
+        Valor = cont;
+    }
+
+}

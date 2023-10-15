@@ -20,7 +20,7 @@ namespace Tp_WEB_Equipo_3
              * pasar ese filtro no se de que manera el listado de default
              * mostrar desde default
              */
-            string bandera = "0";
+            //string bandera = "0";
 
             if (!IsPostBack)
             {
@@ -42,7 +42,9 @@ namespace Tp_WEB_Equipo_3
                 ddlCategoria.DataSource = listaCategorias;
                 ddlCategoria.DataValueField = "Descripcion";
                 ddlCategoria.DataBind();
+
             }
+                FuncionGlobal.CantidadTotal();
         }
 
         protected void btnFiltro_Click(object sender, EventArgs e)
@@ -79,5 +81,6 @@ namespace Tp_WEB_Equipo_3
 
 
         }
+    
     }
 }
