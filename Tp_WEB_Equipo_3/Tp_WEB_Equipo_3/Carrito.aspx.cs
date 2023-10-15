@@ -13,8 +13,11 @@ namespace Tp_WEB_Equipo_3
     {
         public Articulo art = new Articulo();
         public List<Articulo> ListadeCompra = new List<Articulo>();
+            decimal auxprecio = 0;
+            string PrecioTotal;
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (!IsPostBack)
             {
 
@@ -30,6 +33,7 @@ namespace Tp_WEB_Equipo_3
                     {
                         CarritoNegocio Negocio = new CarritoNegocio();
                         Session.Add("listafinal", (Negocio.Cargar(Idaux, ListadeCompra)));
+
                     }
                     else
                     {
@@ -57,13 +61,52 @@ namespace Tp_WEB_Equipo_3
                     dgvCarrito.DataBind();
 
                 }
+                finally
+                {
+                    List<Articulo> Temporal2 = new List<Articulo>();
+                    Temporal2 = (List<Articulo>)Session["listafinal"];
+
+                    if (Temporal2 != null)
+                    {
+                        foreach (Articulo item in Temporal2)
+                        {
+                            auxprecio += item.Precio;
+                        }
+
+                    }
+
+                    PrecioTotal = string.Format("{0:C}", auxprecio);
+                    TextPrecioTotal.Text = PrecioTotal;
+                }
+
             }
+            else
+            {
+
+                List<Articulo> Temporal2 = new List<Articulo>();
+                Temporal2 = (List<Articulo>)Session["listafinal"];
+              
+                if (Temporal2 != null)
+                {
+                    foreach (Articulo item in Temporal2)
+                    {
+                        auxprecio += item.Precio;
+                    }
+
+                }
+               
+                 PrecioTotal = string.Format("{0:C}", auxprecio);
+                    TextPrecioTotal.Text = PrecioTotal;
+            }
+            // PrecioTotal = string.Format("{0:C}", auxprecio);
+            //TextPrecioTotal.Text = PrecioTotal;
 
         }
 
+
         protected void dgvCarrito_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            auxprecio = 0;
             var id = dgvCarrito.SelectedDataKey.Value.ToString();
             Articulo aux = new Articulo();
 
@@ -73,9 +116,24 @@ namespace Tp_WEB_Equipo_3
             {
                 carrito.Remove(aux);
                 Session["listafinal"] = carrito;
-                dgvCarrito.DataSource = carrito;
-                dgvCarrito.DataBind();
+                //dgvCarrito.DataSource = carrito;
+                //dgvCarrito.DataBind();
+        
+
+            if (carrito != null)
+            {
+                foreach (Articulo item in carrito)
+                {
+                    auxprecio += item.Precio;
+                }
+                    PrecioTotal = string.Format("{0:C}", auxprecio);
+                    TextPrecioTotal.Text = PrecioTotal;
+
             }
+            dgvCarrito.DataSource = carrito;
+            dgvCarrito.DataBind();
+            }
+
 
         }
     }

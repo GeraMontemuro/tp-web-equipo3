@@ -273,15 +273,6 @@ namespace negocio
             }
 
         }
-       /*funcion para sumar todos los precios de la lista del carrito*/
-   /* public decimal SumarPreciosCarrito(List<Articulo> listacarrito)
-    {
-        decimal Preciototal = 0;
-        foreach (var articulo in listacarrito)
-        {
-            Preciototal += articulo.Precio;
-        }
-        return Preciototal;
-    }*/
+       
     }
 }

@@ -42,7 +42,8 @@ namespace Tp_WEB_Equipo_3
             }
 
             TextTitulo.Text = ArtDetalle.Nombre;
-            TextPrecio.Text = ArtDetalle.Precio.ToString();
+            string precio = string.Format("{0:C}", ArtDetalle.Precio);
+            TextPrecio.Text = precio;
             TextDescripcion.Text = ArtDetalle.Descripcion;
 
         }
