@@ -8,12 +8,6 @@
     <div class="container text-left">
         <div class="row align-items-start" >
             <div class="col-1" id="left">
-              <%--  <div id="sidebar">
-                    <a href="#">Inicio</a>
-                    <a href="#">Productos</a>
-                    <a href="#marcas">Marcas</a>
-                    <a href="#categorias">Categorías</a>
-                </div>--%>
             </div>
             <div class="col-10">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -25,8 +19,7 @@
                                 <div class="card" style="width: 300px">
                                     <img src="<%#Eval("UrlImagen") %>" class="card-img-top" style="width: auto; height: 300px" alt="..." onerror="this.src='Logos/error.jpg'" />
                                     <div class="card-body">
-                                        <h5 class="card-title"><%#Eval("Nombre") %></h5>
-                                        <p class="card-text"><%#Eval("Descripcion") %></p>
+                                        <h5 class="card-title"><%#Eval("Nombre") %></h5>                                        <p class="card-text"><%#Eval("Marca") %></p>                                        <p class="card-text" ><%#string.Format("{0:C2}",Eval("Precio")) %> </p>
                                         <asp:Button Text="Detalle" CssClass="btn btn-primary" runat="server" ID="btnDetalle" CommandArgument='<%#Eval("IdArticulo") %>' CommandName="ArtDetalle" OnClick="btnDetalle_Click" />
                                     </div>
                                 </div>
