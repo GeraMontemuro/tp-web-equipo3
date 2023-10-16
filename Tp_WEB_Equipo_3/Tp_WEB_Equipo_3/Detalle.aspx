@@ -3,7 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Detalle del Producto  </h1>
+    
+    <h1 class="display-2 custom-heading"> DETALLE DE PRODUCTO </h1>
     <hr />
 
     <div class="container text-center">

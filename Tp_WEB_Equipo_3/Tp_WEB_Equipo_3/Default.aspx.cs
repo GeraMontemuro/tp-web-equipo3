@@ -19,7 +19,6 @@ namespace Tp_WEB_Equipo_3
 
             string bandera = Request.QueryString["bandera"];
 
-
             if (!IsPostBack)
             {
                 repRepetidor.DataSource = ListaArticulo;

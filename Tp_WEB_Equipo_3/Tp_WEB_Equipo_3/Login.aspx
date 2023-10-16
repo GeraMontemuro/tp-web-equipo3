@@ -18,8 +18,8 @@
                 
                
                 <asp:Button Text="Ingresar" CssClass="btn btn-primary" ID="btnAceptar" onClick="btnAceptar_Click" runat="server" />
-              <a style="color:aquamarine" href="Crear Usuarios">  Crear Usuarios</a>
-              <a style="color:aquamarine"  href="olvido contraseña?"> olvidó contraseña? </a>
+              <a style="color:aquamarine" href="Crear Usuarios">  Crear Usuario</a>
+              <a style="color:aquamarine" href="olvido contraseña"> Olvidó su contraseña? </a>
             </div> 
         </div>
     </div>

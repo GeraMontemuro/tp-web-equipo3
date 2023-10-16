@@ -3,11 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <style>        body {
-            color:aquamarine;
-        } </style>
-    <h1>RESUMEN DE COMPRA</h1>
-
+  
+    <h1 class="display-2 custom-heading">RESUMEN DE COMPRAS </h1>
+    <hr />
 
     <asp:GridView ID="dgvCarrito"  runat="server" CssClass="table" DataKeyNames="IDArticulo" AutoGenerateColumns="false" OnSelectedIndexChanged="dgvCarrito_SelectedIndexChanged">
         <Columns>
@@ -20,7 +18,7 @@
         </Columns>
     </asp:GridView> 
 
-          <asp:Label ID="lblPrecio" runat="server" Text="Precio Total: " FontColor="white"></asp:Label>
+          <asp:Label ID="lblPrecio" style="color:aquamarine" runat="server" Text="Precio Total: " ></asp:Label>
      <asp:TextBox ID="TextPrecioTotal" ReadOnly="true" CssClass="form-control" runat="server" style="width: 150px; height:45px" alt="..." ></asp:TextBox>
 
 
